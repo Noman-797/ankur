@@ -1,0 +1,45 @@
+import { useEffect, type ReactNode } from 'react'
+
+interface Props {
+  title: string
+  onClose: () => void
+  children: ReactNode
+}
+
+export default function Modal({ title, onClose, children }: Props) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [onClose])
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-board/50 p-3 backdrop-blur-sm animate-fade-up sm:p-4"
+      onClick={onClose}
+    >
+      <div
+        className="max-h-[100dvh] w-full max-w-3xl overflow-x-hidden overflow-y-auto rounded-t-2xl rounded-b-none bg-white p-4 shadow-2xl sm:max-h-[88vh] sm:rounded-3xl sm:p-8"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="mb-5 flex items-center justify-between gap-4">
+          <h3 className="min-w-0 truncate font-display text-xl font-bold text-board">{title}</h3>
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-board/15 text-lg leading-none text-muted transition-colors hover:bg-mist hover:text-board"
+          >
+            ×
+          </button>
+        </div>
+        {children}
+      </div>
+    </div>
+  )
+}

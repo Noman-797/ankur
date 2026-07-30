@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Ankur">
+  <rect width="512" height="512" rx="112" fill="#0c2920"/>
+  <ellipse cx="256" cy="408" rx="120" ry="36" fill="#143d30"/>
+  <path
+    d="M256 392 C256 320 259 248 256 192"
+    fill="none"
+    stroke="#f7f4ec"
+    stroke-width="28"
+    stroke-linecap="round"
+  />
+  <path
+    d="M248 264 C188 224 140 184 152 148 C200 140 244 180 256 226 Z"
+    fill="#3dd68c"
+  />
+  <path
+    d="M264 236 C316 192 372 160 380 198 C344 246 292 270 258 284 Z"
+    fill="#0f8f5a"
+  />
+  <circle cx="256" cy="160" r="26" fill="#3dd68c"/>
+</svg>
