@@ -4,7 +4,11 @@
 
 **Ankur brings together classroom whiteboard photos, class notes, PDFs, and YouTube lectures into one AI-powered study workspace. Using Gemma 4, it creates personalized notes, flashcards, quizzes, simple explanations, and helps students prepare smarter for exams.**
 
-*Build With Gemma @Bangladesh · Multimodal Track (Gemma 4)*
+[![Live App](https://img.shields.io/badge/Live_App-Open_Ankur-0f8f5a?style=for-the-badge)](https://ankur-7ly7.onrender.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-Noman--797%2Fankur-181717?style=for-the-badge&logo=github)](https://github.com/Noman-797/ankur)
+[![Sample Board](https://img.shields.io/badge/Sample_Board-Try_the_Image-5a7267?style=for-the-badge)](samples/test-board.png)
+
+*Build with Gemma: ML, AI, Deep Learning & NLP Community*
 
 [![Model](https://img.shields.io/badge/Gemma%204-gemma--4--26b--a4b--it-7c3aed)](#how-gemma-is-used)
 [![Backend](https://img.shields.io/badge/FastAPI-Python%203.12-009688)](#technical-architecture)
@@ -81,7 +85,78 @@ The complete workflow takes only a few simple steps:
 
 ## Screenshots
 
-> Screenshots will be added here. *(Home, processing, notes, flashcards, quiz, Topic Radar, Ask Tutor — send them when ready.)*
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><b>Home</b></p>
+      <img src="docs/screenshot-home.png" alt="Home" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><b>Digitize in Progress</b></p>
+      <img src="docs/screenshot-processing.png" alt="Digitize in progress" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><b>Notes</b></p>
+      <img src="docs/screenshot-notes.png" alt="Notes" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><b>Code</b></p>
+      <img src="docs/screenshot-code.png" alt="Code" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><b>Flow</b></p>
+      <img src="docs/screenshot-flow.png" alt="Flow" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><b>Quiz</b></p>
+      <img src="docs/screenshot-quiz.png" alt="Quiz" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><b>Step-by-step</b></p>
+      <img src="docs/screenshot-steps.png" alt="Step-by-step explanation" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><b>Listen</b></p>
+      <img src="docs/screenshot-listen.png" alt="Listen mode audio player" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><b>Ask Tutor</b></p>
+      <img src="docs/screenshot-ask.png" alt="Ask Tutor" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><b>Lecture</b></p>
+      <img src="docs/screenshot-lecture.png" alt="Lecture intake" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><b>Topic Radar — Exam Map</b></p>
+      <img src="docs/screenshot-exam-map.png" alt="Topic Radar exam map" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><b>Radar Desk — MCQ</b></p>
+      <img src="docs/screenshot-radar-mcq.png" alt="Radar Desk MCQ" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <p><b>Radar Desk — Previous Answers</b></p>
+      <img src="docs/screenshot-radar-answers.png" alt="Radar Desk previous answers" />
+    </td>
+    <td width="50%" align="center" valign="top">
+      <p><b>Saved Study Packs</b></p>
+      <img src="docs/screenshot-saved.png" alt="Saved study packs" />
+    </td>
+  </tr>
+</table>
 
 ## Impact & Validation
 
@@ -188,6 +263,6 @@ cd frontend && npm run dev                             # terminal 2 → http://l
 
 <div align="center">
 
-Built for Bangladeshi students · **Build With Gemma @Bangladesh 2026**
+Built for Bangladeshi students · **Build with Gemma: ML, AI, Deep Learning & NLP Community**
 
 </div>
