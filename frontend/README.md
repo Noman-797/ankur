@@ -1,32 +1,39 @@
-# React + TypeScript + Vite
+# Ankur frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React 19 + TypeScript + Vite app for [Ankur](../README.md). It is installable
+as a PWA and talks to the FastAPI backend in [`../backend`](../backend).
 
-Currently, two official plugins are available:
+## Run it locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Start the backend first (it serves the API on port 8000), then:
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Vite proxies every `/api/*` request to `http://localhost:8000`
+(see `vite.config.ts`), so no extra configuration is needed in development.
+
+## Scripts
+
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the dev server with hot reload |
+| `npm run build` | Type-check (`tsc -b`) and build to `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Lint with oxlint |
+
+## Production
+
+The root [`Dockerfile`](../Dockerfile) builds this app with `npm ci && npm run build`
+and the backend serves the files in `dist/`. API calls are never cached by the
+service worker (`NetworkOnly` for `/api/`), so answers always come from the server.
+
+## Where things live
+
+- `src/App.tsx`: app shell, upload flow and tabs
+- `src/components/`: one file per panel or tab (notes, quiz, flashcards, radar, …)
+- `src/lib/`: client-side helpers such as history, sessions and spaced repetition
+- `public/`: favicon, PWA icon and the sample whiteboard image
